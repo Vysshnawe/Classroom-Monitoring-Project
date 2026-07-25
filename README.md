@@ -106,15 +106,5 @@ Open your browser and navigate to `http://127.0.0.1:5000/`.
 
 This project is developed for academic and educational purposes.
 
-```
-
----
-
-### How to add this to your GitHub Repository:
-1. Go to your repository on GitHub: [`Aspirant5/Nothing_`](https://github.com/Aspirant5/Nothing_).
-2. Click on the `README.md` file in the file list.
-3. Click the **pencil icon (Edit this file)** at the top right.
-4. Paste the content above, replacing what's currently in `README.md`.
-5. Scroll down and click **Commit changes...**.
 
 ```
