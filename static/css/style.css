@@ -1,0 +1,55 @@
+/* Custom Styles for Classroom AI Dashboard */
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.glass-card {
+    background: #121212;
+    border: 1px solid #222;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.insight-card {
+    background: #121212;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.insight-card:hover {
+    border-color: #5a4cf4;
+}
+
+.start-btn {
+    background: #5a4cf4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.start-btn:hover {
+    background: #4a3ce3;
+    transform: scale(1.02);
+}
+
+.stat-val {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.dot {
+    color: #5a4cf4;
+}

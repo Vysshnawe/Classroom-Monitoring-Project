@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor AI | Attendance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        :root { --sidebar-width: 280px; }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; background: white; z-index: 9999; border-right: 1px solid #eee; padding: 30px; }
+        .main-content { margin-left: var(--sidebar-width); padding: 40px; }
+        .nav-link { color: #888; padding: 15px; border-radius: 12px; font-weight: 500; text-decoration: none; display: block; }
+        .nav-link.active, .nav-link:hover { background: #111 !important; color: white !important; }
+        .table-card { background: white; border-radius: 24px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.02); overflow: hidden; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h4 class="fw-bold mb-5">Monitor AI</h4>
+        <nav>
+            <a href="/dashboard" class="nav-link mb-2">Dashboard</a>
+            <a href="/attendance" class="nav-link active mb-2">Attendance</a>
+            <a href="/reports" class="nav-link mb-2">Reports</a>
+            <a href="/journal" class="nav-link mb-2">Journal</a>
+            <a href="/dataset" class="nav-link mb-2">Face Dataset</a>
+            <a href="/logout" class="nav-link mt-5">Logout</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h2 class="fw-bold mb-4">Attendance Logs</h2>
+        <div class="table-card">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">Date & Time</th>
+                        <th>Classroom</th>
+                        <th>Students Present</th>
+                        <th>Avg. Attentiveness</th>
+                        <th>Faculty Notes</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in sessions %}
+                    <tr>
+                        <td class="ps-4 fw-bold">{{ s.session_date }}</td>
+                        <td><span class="badge bg-light text-dark rounded-pill px-3">{{ s.class_name }}</span></td>
+                        <td>{{ s.total_students }}</td>
+                        <td>{{ s.avg_attentiveness }}%</td>
+                        <td>{{ s.faculty_notes or '—' }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    {% if not sessions %}
+                    <tr><td colspan="6" class="text-center py-5 text-muted">No analysis sessions found yet.</td></tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
