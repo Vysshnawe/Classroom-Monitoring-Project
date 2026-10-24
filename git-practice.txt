@@ -1,1 +1,2 @@
 Learning Git for DevOps 
+Git diff shows file changes. 
