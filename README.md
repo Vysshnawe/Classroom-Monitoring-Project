@@ -108,3 +108,9 @@ This project is developed for academic and educational purposes.
 
 
 ```
+
+
+## Development Workflow
+
+This project uses Git and GitHub for source code management.
+Feature branches help developers make changes safely before merging them into the main branch.
